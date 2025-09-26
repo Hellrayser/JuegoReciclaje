@@ -48,5 +48,26 @@ cubos.forEach(cubo => {
   });
 });
 
+if (reiniciarBtn) {
+  reiniciarBtn.addEventListener("click", () => {
+  puntos = 0;
+  marcador.textContent = "Puntos: 0";
+  zonaInicial.innerHTML = `
+    <div class="objeto" draggable="true" data-tipo="organico">🍌</div>
+    <div class="objeto" draggable="true" data-tipo="papel">📰</div>
+    <div class="objeto" draggable="true" data-tipo="plastico">🥤</div>
+    <div class="objeto" draggable="true" data-tipo="organico">🍎</div>
+    <div class="objeto" draggable="true" data-tipo="papel">📦</div>
+    <div class="objeto" draggable="true" data-tipo="plastico">🛍️</div>
+  `;
+
+  const nuevosObjetos = zonaInicial.querySelectorAll(".objeto");
+  nuevosObjetos.forEach(attachDragHandlers);
+  });
+} else {
+  console.warn('Botón de reinicio no encontrado: no se puede reiniciar el juego desde JS.');
+}
+
+
 
 
