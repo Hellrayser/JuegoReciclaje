@@ -8,8 +8,37 @@
 </head>
 <body>
     <script src="juego.js"></script>
-    <div class="boton">
-        <button class="botonPrimario">Reiniciar Juego</button>
-    </div>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Juego de Reciclaje</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>♻️ Juego de Reciclaje</h1>
+  <div id="puntos">Puntos: 0</div>
+
+  <h2>Arrastra la basura al contenedor correcto:</h2>
+  <div id="zona-inicial" class="zona">
+    <div class="objeto" draggable="true" data-tipo="organico">🍌</div>
+    <div class="objeto" draggable="true" data-tipo="papel">📰</div>
+    <div class="objeto" draggable="true" data-tipo="plastico">🥤</div>
+    <div class="objeto" draggable="true" data-tipo="organico">🍎</div>
+    <div class="objeto" draggable="true" data-tipo="papel">📦</div>
+    <div class="objeto" draggable="true" data-tipo="plastico">🛍️</div>
+  </div>
+
+  <div class="contenedores">
+    <div class="cubo" data-tipo="organico">🌱 Orgánico</div>
+    <div class="cubo" data-tipo="papel">📄 Papel</div>
+    <div class="cubo" data-tipo="plastico">🧴 Plástico</div>
+  </div>
+
+  <button id="reiniciar">🔄 Reiniciar juego</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
 </body>
 </html>
